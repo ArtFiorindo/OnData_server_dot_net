@@ -4,22 +4,26 @@ API REST desenvolvida com C#/.NET usando Entity Framework para o aplicativo On-D
 
 **Link GitHub**: [https://github.com/eduardofuncao/on-data-server-dotnet](https://github.com/eduardofuncao/on-data-server-dotnet)
 
+---
+
 ## Equipe
 
 > **Artur Lopes Fiorindo** » 53481  
-> Responsável pela implementação do endpoint para **Ocorrências**  
-> 
+> Responsável pela implementação do endpoint para **Ocorrências**
+>
 > **Eduardo Felipe Nunes Função** » 553362  
-> Responsável pela implementação do endpoint para **Pacientes**  
-> 
+> Responsável pela implementação do endpoint para **Pacientes**
+>
 > **Jhoe Kochi Hashimoto** » 553831  
-> Responsável pela ideação e definições de negócio do projeto  
+> Responsável pela ideação e definições de negócio do projeto
 
 ---
 
 ## Objetivo
 
 Desenvolver uma API robusta e eficiente para gerenciar sinistros odontológicos, fornecendo endpoints CRUD para manipulação de entidades como Pacientes, Dentistas, Ocorrências e Doenças, integrada a um banco de dados Oracle e seguindo boas práticas de desenvolvimento em C#/.NET.
+
+---
 
 ## Escopo
 
@@ -46,15 +50,31 @@ Desenvolver uma API robusta e eficiente para gerenciar sinistros odontológicos,
 
 ---
 
-## Estrutura da Arquitetura
+## Arquitetura
 
-O projeto utiliza uma arquitetura em camadas:
+O projeto utiliza uma arquitetura em camadas, seguindo o padrão **MVC (Model-View-Controller)** para a parte web e **Repository Pattern** para a camada de dados. A estrutura é dividida em:
 
-- **Camada de Apresentação (API)**: Exposição de endpoints REST e processamento de solicitações HTTP.
-- **Camada de Negócio (Serviços)**: Implementação da lógica de negócios e regras de processamento.
-- **Camada de Dados (Data Access Layer)**: Interação com o banco de dados usando Entity Framework e Oracle.
+### 1. **Camada de Apresentação (API)**
+- **Controllers**: Expõem os endpoints REST e processam as solicitações HTTP.
+- **Views**: Renderizam as páginas HTML para interação com o usuário.
+- **Swagger**: Documentação automática da API.
 
-### Diagrama de Entidade-Relacionamento (ER)
+### 2. **Camada de Negócio (Serviços)**
+- **Services**: Implementam a lógica de negócios e regras de processamento.
+- **ViewModels**: Classes que representam os dados exibidos nas views.
+
+### 3. **Camada de Dados (Data Access Layer)**
+- **Repositories**: Interagem com o banco de dados usando Entity Framework.
+- **DbContext**: Configuração do contexto do banco de dados Oracle.
+
+### Design Patterns Utilizados
+- **Repository Pattern**: Para abstrair o acesso ao banco de dados e facilitar a manutenção.
+- **Singleton**: Para gerenciar a configuração da aplicação.
+- **Dependency Injection**: Para injeção de dependências nos serviços e controllers.
+
+---
+
+## Diagrama de Entidade-Relacionamento (ER)
 
 ![Diagrama ER](https://github.com/user-attachments/assets/a65fefc6-89d1-40ab-9486-03b65be135db)
 
@@ -111,51 +131,101 @@ Renderiza a página inicial da aplicação.
 
 ---
 
-## Funcionalidades
-
-- API completa com suporte a operações CRUD para várias entidades.
-- Relacionamentos entre entidades como Pacientes e Ocorrências.
-- Conexão e integração com banco de dados Oracle.
-
----
-
 ## Como Executar o Projeto
 
-Para iniciar o servidor da API, utilize o comando:
+### Pré-requisitos
+- **.NET SDK 8.0** instalado.
+- **Oracle Database** configurado e acessível.
+- **Git** para clonar o repositório.
+
+### Passos para Execução
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/eduardofuncao/on-data-server-dotnet.git
+   cd on-data-server-dotnet
+   ```
+
+2. **Configure o banco de dados**:
+  - Atualize a string de conexão no arquivo `appsettings.json` com as credenciais do seu banco de dados Oracle.
+
+3. **Execute as migrations**:
+   ```bash
+   dotnet-ef database update
+   ```
+
+4. **Inicie o servidor**:
+   ```bash
+   dotnet run
+   ```
+
+5. **Acesse a API**:
+  - Acesse `http://localhost:5146` para a interface web.
+  - Acesse `http://localhost:5146/swagger` para a documentação da API.
+
+---
+
+## Testes
+
+### Testes Automatizados
+Foram implementados testes unitários para os serviços e controllers usando **xUnit**. Para executar os testes, use o comando:
 
 ```bash
-dotnet run
+dotnet test
 ```
 
-Este comando deve ser executado no diretório raiz do projeto.
+### Exemplos de Testes
+
+#### Teste de Criação de Paciente
+```csharp
+[Fact]
+public async Task CreatePaciente_ShouldAddPacienteToDatabase()
+{
+    var options = new DbContextOptionsBuilder<OnDataDbContext>()
+        .UseInMemoryDatabase(databaseName: "TestDatabase")
+        .Options;
+
+    using (var context = new OnDataDbContext(options))
+    {
+        var service = new PacienteService(context);
+        var paciente = new Paciente { Nome = "Teste", Cpf = "123.456.789-00" };
+
+        await service.CreatePacienteAsync(paciente);
+
+        var result = await context.Pacientes.FirstOrDefaultAsync(p => p.Cpf == "123.456.789-00");
+        Assert.NotNull(result);
+        Assert.Equal("Teste", result.Nome);
+    }
+}
+```
+
+#### Teste de Listagem de Ocorrências
+```csharp
+[Fact]
+public async Task GetOcorrencias_ShouldReturnListOfOcorrencias()
+{
+    var options = new DbContextOptionsBuilder<OnDataDbContext>()
+        .UseInMemoryDatabase(databaseName: "TestDatabase")
+        .Options;
+
+    using (var context = new OnDataDbContext(options))
+    {
+        context.Ocorrencias.Add(new Ocorrencia { NomeOcorrencia = "Teste", Detalhes = "Detalhes" });
+        await context.SaveChangesAsync();
+
+        var service = new OcorrenciaService(context);
+        var result = await service.GetOcorrenciasAsync();
+
+        Assert.Single(result);
+        Assert.Equal("Teste", result[0].NomeOcorrencia);
+    }
+}
+```
 
 ---
 
-## Trabalhando com o Banco de Dados
+## Conclusão
 
-- **Criar uma Migration**: Para criar um novo arquivo de migration, execute:
-  ```bash
-  dotnet-ef migrations add NomeDaMigration
-  ```
-- **Atualizar o Banco de Dados**: Para aplicar as migrations e atualizar o banco de dados:
-  ```bash
-  dotnet-ef database update
-  ```
-- **Remover uma Migration**: Para excluir a última migration criada:
-  ```bash
-  dotnet-ef migrations remove
-  ```
+Este projeto demonstra a aplicação de boas práticas de desenvolvimento em C#/.NET, incluindo arquitetura em camadas, design patterns e testes automatizados. A API está pronta para ser integrada ao frontend e utilizada em produção.
 
 ---
-
-## Documentação e Testes
-
-Para testar a API e explorar a documentação gerada automaticamente, utilize o **Swagger** acessando:
-
-```
-http://localhost:5146/swagger/index.html
-```
-
----
-
-Esse `README.md` fornece uma visão abrangente do projeto, incluindo configurações, rotas e funcionalidades. Qualquer atualização adicional pode ser facilmente integrada conforme necessário.
