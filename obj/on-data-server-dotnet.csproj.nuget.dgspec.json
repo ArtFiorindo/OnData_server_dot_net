@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/on-data-server-dotnet.csproj": {}
+    "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/on-data-server-dotnet.csproj": {}
   },
   "projects": {
-    "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/on-data-server-dotnet.csproj": {
+    "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/on-data-server-dotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/on-data-server-dotnet.csproj",
+        "projectUniqueName": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/on-data-server-dotnet.csproj",
         "projectName": "on-data-server-dotnet",
-        "projectPath": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/on-data-server-dotnet.csproj",
+        "projectPath": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/on-data-server-dotnet.csproj",
         "packagesPath": "/Users/arturfiorindo/.nuget/packages/",
-        "outputPath": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/obj/",
+        "outputPath": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/arturfiorindo/.nuget/NuGet/NuGet.Config"

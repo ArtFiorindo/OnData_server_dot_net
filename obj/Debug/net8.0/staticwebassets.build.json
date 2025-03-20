@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "33AvQVT+ilnGoNQLdY+1RGiDxAiPjp7dNLqdjckry9A=",
+  "Hash": "fLz1CEfM+DhINLOzjLnPErMVE6C3uDbo1jbFU2B9JFk=",
   "Source": "on-data-server-dotnet",
   "BasePath": "_content/on-data-server-dotnet",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "on-data-server-dotnet/wwwroot",
       "Source": "on-data-server-dotnet",
-      "ContentRoot": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/wwwroot/",
+      "ContentRoot": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/wwwroot/",
       "BasePath": "_content/on-data-server-dotnet",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/wwwroot/css/styles.css",
+      "Identity": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/wwwroot/css/styles.css",
       "SourceId": "on-data-server-dotnet",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/wwwroot/",
+      "ContentRoot": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/wwwroot/",
       "BasePath": "_content/on-data-server-dotnet",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",

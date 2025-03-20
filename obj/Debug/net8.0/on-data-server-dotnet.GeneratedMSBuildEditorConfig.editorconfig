@@ -9,43 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = on_data_server_dotnet
 build_property.RootNamespace = on_data_server_dotnet
-build_property.ProjectDir = /Users/arturfiorindo/RiderProjects/on-data-server-dotnet/
+build_property.ProjectDir = /Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/arturfiorindo/RiderProjects/on-data-server-dotnet
+build_property.MSBuildProjectDirectory = /Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Cadastro/Create.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Cadastro/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FkYXN0cm8vQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Cadastro/Delete.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Cadastro/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FkYXN0cm8vRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Cadastro/Details.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Cadastro/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FkYXN0cm8vRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Cadastro/Edit.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Cadastro/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FkYXN0cm8vRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Cadastro/index.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Cadastro/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FkYXN0cm8vaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Home/index.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/Shared/_Layout.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/Views/_ViewStart.cshtml]
+[/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

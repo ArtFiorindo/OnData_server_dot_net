@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3LydPm9gV0I=",
+  "dgSpecHash": "qzezjgQiUaM=",
   "success": true,
-  "projectFilePath": "/Users/arturfiorindo/RiderProjects/on-data-server-dotnet/on-data-server-dotnet.csproj",
+  "projectFilePath": "/Users/arturfiorindo/Desktop/Entrega .net Sprint3/on-data-server-dotnet_Sprint3/on-data-server-dotnet.csproj",
   "expectedPackageFiles": [
     "/Users/arturfiorindo/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/arturfiorindo/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
